@@ -7,11 +7,11 @@ using UnityEngine;
 
 namespace Project.Scripts {
     public class RabbitController : Animal {
-        [SerializeField] private float animalsDetectRadius;
+        [SerializeField] private float detectRadius = 3f;
 
         protected override void SetCurrentState() {
             var results = new List<Collider2D>();
-            Physics2D.OverlapCircle(transform.position, animalsDetectRadius, new ContactFilter2D().NoFilter(), results);
+            Physics2D.OverlapCircle(transform.position, detectRadius, new ContactFilter2D().NoFilter(), results);
             results.Remove(collider);
             var providers = states.Select(state => state.VelocityProvider).ToList();
             if (results.Count > 0) {
