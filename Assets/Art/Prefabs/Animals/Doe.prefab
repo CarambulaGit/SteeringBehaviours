@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002944966746512112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1002944966837431944}
@@ -116,7 +116,11 @@ MonoBehaviour:
     velocityLimit: 0
   wolfsDetectRadius: 5
   hunterDetectRadius: 3
-  herd: []
+  herd:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1002944966746512111}
 --- !u!114 &1002944966746512125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd6d2f5030b8f94cb1e13c4e34017a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultWeight: 1
+  defaultWeight: 3
   weight: 1
   circleDistance: 1
   circleRadius: 2
@@ -146,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7643955af7b049249b7b10d16a9632cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultWeight: 1
+  defaultWeight: 1.5
   weight: 1
   objectsToFlee: []
 --- !u!114 &1002944966746512110
@@ -161,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833021a9b3b26b0488cc8da2c45cd147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultWeight: 1
+  defaultWeight: 2
   weight: 1
   objectsToFollow: []
   arriveRadius: 0
