@@ -16,7 +16,8 @@ namespace Project.Scripts {
             var providers = states.Select(state => state.VelocityProvider).ToList();
             if (results.Count > 0) {
                 StateVelocityProvider(providers, StateType.Fleeing, out var stateVelocityProvider);
-                ((Flee) stateVelocityProvider).objectsToFlee = results.Select(obj => obj.transform).ToList();
+                ((Flee) stateVelocityProvider).objectsToFlee =
+                    results.Select(obj => obj.transform.position.ToVector2()).ToList();
             }
             else {
                 StateVelocityProvider(providers, StateType.Wandering, out _);
