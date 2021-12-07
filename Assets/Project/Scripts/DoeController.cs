@@ -10,6 +10,10 @@ namespace Project.Scripts {
         [SerializeField] private float wolfsDetectRadius;
         [SerializeField] private float hunterDetectRadius;
         [SerializeField] private List<DoeController> herd;
+        
+        protected void Update() {
+            base.Update();
+        }
 
         protected override void SetCurrentState() {
             var position = transform.position;

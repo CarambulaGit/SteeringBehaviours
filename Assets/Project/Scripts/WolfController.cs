@@ -18,11 +18,12 @@ namespace Project.Scripts {
             base.Awake();
         }
 
-        private void Update() {
+        protected void Update() {
             _timer -= Time.deltaTime;
             if (_timer < 0) {
                 Die();
             }
+            base.Update();
         }
 
         protected override void SetCurrentState() {

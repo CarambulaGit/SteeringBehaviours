@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 namespace Project.Scripts {
     public class PlayerController : CanBeKilledController {
+        protected void Update() {
+            base.Update();
+        }
+
         public override void Die() {
             // StartCoroutine(DeathCoroutine());
             DeathTask();

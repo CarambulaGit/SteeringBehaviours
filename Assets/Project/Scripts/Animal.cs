@@ -18,6 +18,11 @@ namespace Project.Scripts {
 
         protected void Awake() {
             SetCurrentState();
+            base.Awake();
+        }
+
+        protected void Update() {
+            base.Update();
         }
 
         protected abstract void SetCurrentState();
