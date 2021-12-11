@@ -11,11 +11,16 @@ namespace Project.Scripts
         private bool isRestarting;
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+            
             if (isRestarting)
             {
                 return;
             }
-            if (FindObjectsOfType<Animal>().Length == 0)
+            if ((FindObjectsOfType<Animal>().Length == 0) || Input.GetKeyDown(KeyCode.F5))
             {
                 StartCoroutine(RestartCoroutine());
             }
