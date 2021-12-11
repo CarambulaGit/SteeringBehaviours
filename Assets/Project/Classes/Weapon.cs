@@ -28,6 +28,9 @@ namespace Project.Classes {
         public float MaxShotDistance => _maxShotDistance;
         private DateTime _lastShotTime = DateTime.MinValue;
 
+        public float AmountOfBullets => _amountOfBullets;
+        public float CurrentAmmo => _currentAmmo;
+
         public event Action OnShot;
         public event Action OnReloadStart;
         public event Action OnReloadEnd;
